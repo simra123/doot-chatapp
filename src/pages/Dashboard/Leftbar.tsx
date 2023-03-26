@@ -31,7 +31,7 @@ const Leftbar = (props: LeftbarProps) => {
     if (activePage) {
       navigate(`/${activePage}`)
     }
-  }, [activePage])
+  }, [activePage, navigate])
 
   return (
     <>
