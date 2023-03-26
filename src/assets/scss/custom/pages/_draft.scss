@@ -44,7 +44,7 @@ $border-radius : "5px";
     padding: 0.5rem 1.2rem;
     background-color: #fff !important;
     overflow: auto !important;
-    border: 1px solid $border-color;
+   
     height: 232px !important;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
@@ -180,7 +180,7 @@ body[data-layout-mode="dark"] {
 
       min-height: 10rem;
       padding: 0.5rem 1.2rem;
-      border: 1px solid $border-color;
+     
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
