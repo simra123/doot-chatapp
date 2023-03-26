@@ -20,12 +20,13 @@ const File = () => {
           </Col>
           <Col xxl={3} md={3}>
             <div className="drag-image">
+              <input type="file" onChange={(event: any) => setPreviewImage(URL.createObjectURL(event.target.files[0]))} />
               {
                 previewImage ? <img src={previewImage} alt="preview" /> : <>
                   <div className="icon"> <i className="bx bx-cloud-upload"></i></div>
                   <h6 className="p-1">Drag & Drop File Here</h6>
                   {/* <span>OR</span><button>Browse File</button> */}
-                  <input type="file" onChange={(event: any) => setPreviewImage(URL.createObjectURL(event.target.files[0]))} />
+
                 </>
               }
 
