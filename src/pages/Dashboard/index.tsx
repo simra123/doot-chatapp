@@ -6,14 +6,15 @@ import { useRedux } from "../../hooks/index";
 
 // hooks
 import { useConversationUserType } from "../../hooks/index";
-
+import { useParams } from "react-router-dom";
 // component
 import Leftbar from "./Leftbar";
 import ConversationUser from "./ConversationUser/index";
 import UserProfileDetails from "./UserProfileDetails/index";
 import Welcome from "./ConversationUser/Welcome";
+import File from "./ConversationUser/File";
 
-interface IndexProps {}
+interface IndexProps { }
 const Index = (props: IndexProps) => {
   // global store
   const { useAppSelector } = useRedux();
@@ -23,7 +24,9 @@ const Index = (props: IndexProps) => {
   }));
 
   const { isChannel } = useConversationUserType();
+  const { active_tab } = useParams()
 
+  console.log(active_tab)
   return (
     <>
       <Leftbar />
@@ -43,7 +46,10 @@ const Index = (props: IndexProps) => {
             <UserProfileDetails isChannel={isChannel} />
           </div>
         ) : (
-          <Welcome />
+
+          active_tab === "chat" ? <File /> : <Welcome />
+
+
         )}
       </div>
     </>

@@ -26,6 +26,37 @@
     min-width: 100%;
   }
 }
+.profile_avatar{
+  position: relative;
+  .user-status {
+    width: 18px;
+    height: 18px;
+    background-color: $gray-500;
+    border-radius: 50%;
+    border: 2px solid $card-bg;
+    position: absolute;
+    right: 95px;
+    left: auto;
+    bottom: 0;
+    @media (max-width: 991px) {
+      right: 46%;
+    }
+    @media (max-width: 500px) {
+      right: 40%;
+    }
+  }
+  &.online {
+    .user-status {
+      background-color: $success;
+    }
+  }
+
+  &.away {
+    .user-status {
+      background-color: $warning;
+    }
+  }
+}
 
 .user-profile-img {
   position: relative;

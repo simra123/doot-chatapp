@@ -160,30 +160,7 @@ body[data-layout-mode="dark"] {
     border-color: lighten($gray-dark-300, 2%);
   }
  
-  .profile_avatar{
-    .user-status {
-      width: 10px;
-      height: 10px;
-      background-color: $gray-500;
-      border-radius: 50%;
-      border: 2px solid $card-bg;
-      position: absolute;
-      right: 0;
-      left: auto;
-      bottom: 0;
-    }
-    &.online {
-      .user-status {
-        background-color: $success;
-      }
-    }
-  
-    &.away {
-      .user-status {
-        background-color: $warning;
-      }
-    }
-  }
+ 
 
   .btn-close {
     background: transparent escape-svg($btn-close-bg-dark) center /

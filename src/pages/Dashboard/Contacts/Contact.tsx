@@ -7,10 +7,12 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
-
+import { useRedux } from "../../../hooks/index";
 //utils
 import { DivideByKeyResultTypes } from "../../../utils";
-
+import {
+  toggleUserDetailsTab
+} from "../../../redux/actions";
 // interfaaces
 import { ContactTypes } from "../../../data/contacts";
 
@@ -37,9 +39,12 @@ const ContactItem = ({ contact, onSelectChat }: ContactItemProps) => {
     "bg-purple",
   ];
   const [color] = useState(Math.floor(Math.random() * colors.length));
-
+const {dispatch} = useRedux()
   return (
-    <li onClick={() => onSelectChat(contact.id)}>
+    <li onClick={() =>{  
+      dispatch(toggleUserDetailsTab(true))
+      onSelectChat(contact.id)
+      }}>
       <div className="d-flex align-items-center">
         <div className="flex-shrink-0 me-2">
           <div className="avatar-xs">

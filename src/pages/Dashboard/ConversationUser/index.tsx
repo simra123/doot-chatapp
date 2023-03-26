@@ -55,6 +55,7 @@ const Index = ({ isChannel }: IndexProps) => {
     isImageDeleted: state.Chats.isImageDeleted,
   }));
 
+
   const onOpenUserDetails = () => {
     dispatch(toggleUserDetailsTab(true));
   };

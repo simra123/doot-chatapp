@@ -83,10 +83,10 @@ const MyProfile = ({ basicDetails }: MyProfileProps) => {
       <div className="text-center p-3 p-lg-4 border-bottom pt-2 pt-lg-2 mt-n5 position-relative">
         <div className="mb-lg-3 mb-2">
           {basicDetails && basicDetails.coverImage && (
-            <div className="profile_avatar">
+            <div className="profile_avatar online">
             <img
               src={basicDetails.avatar}
-              className="rounded-circle avatar-lg img-thumbnail online"
+              className="rounded-circle avatar-lg img-thumbnail "
               alt=""
             />
            <span className="user-status"></span></div>
