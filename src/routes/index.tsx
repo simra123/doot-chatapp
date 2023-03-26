@@ -14,34 +14,34 @@ const Index = (props: any) => {
     <React.Fragment>
       <Routes>
         <Route>
-              {publicRoutes.map((route : any, idx :  number) => (
-                <Route
-                  path={route.path}
-                  element={
-                    <NonAuthLayout>
-                      {route.component}
-                    </NonAuthLayout>
-                  }
-                  key={idx}
-                />
-              ))}
+          {publicRoutes.map((route: any, idx: number) => (
+            <Route
+              path={route.path}
+              element={
+                <NonAuthLayout>
+                  {route.component}
+                </NonAuthLayout>
+              }
+              key={idx}
+            />
+          ))}
         </Route>
 
         <Route>
-              {privateRoutes.map((route, idx) => (
-                <Route
-                  path={route.path}
-                  element={
-                    <AuthProtected>
-                      <DefaultLayout>
-                      {route.component}
-                      </DefaultLayout>
-                    </AuthProtected>
-                  }
-                  key={idx}
-                  // exact={true}
-                />
-              ))}
+          {privateRoutes.map((route, idx) => (
+            <Route
+              path={route.path}
+              element={
+                <AuthProtected>
+                  <DefaultLayout>
+                    {route.component}
+                  </DefaultLayout>
+                </AuthProtected>
+              }
+              key={idx}
+            // exact={true}
+            />
+          ))}
         </Route>
       </Routes>
     </React.Fragment>
