@@ -14,6 +14,7 @@ import Contacts from "./Contacts/index";
 import Calls from "./Calls/index";
 import Bookmark from "./Bookmark/index";
 import Settings from "./Settings/index";
+import File from "./ConversationUser/File";
 
 interface LeftbarProps { }
 const Leftbar = (props: LeftbarProps) => {
@@ -79,6 +80,12 @@ const Leftbar = (props: LeftbarProps) => {
             role="tabpanel"
           >
             <Settings />
+          </TabPane>
+          <TabPane
+            tabId={TABS.FILES}
+            role="tabpanel"
+          >
+            <File />
           </TabPane>
         </TabContent>
       </div>

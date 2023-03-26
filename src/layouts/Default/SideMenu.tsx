@@ -75,12 +75,13 @@ const Logo = () => {
 interface MenuNavItemProps {
   item: MenuItemType;
   selectedTab:
-    | TABS.BOOKMARK
-    | TABS.CALLS
-    | TABS.CHAT
-    | TABS.CONTACTS
-    | TABS.SETTINGS
-    | TABS.USERS;
+  | TABS.BOOKMARK
+  | TABS.CALLS
+  | TABS.CHAT
+  | TABS.CONTACTS
+  | TABS.SETTINGS
+  | TABS.FILES
+  | TABS.USERS;
   onChangeTab: (
     id:
       | TABS.BOOKMARK
@@ -89,6 +90,7 @@ interface MenuNavItemProps {
       | TABS.CONTACTS
       | TABS.SETTINGS
       | TABS.USERS
+      | TABS.FILES
   ) => void;
 }
 const MenuNavItem = ({ item, selectedTab, onChangeTab }: MenuNavItemProps) => {
@@ -124,6 +126,8 @@ interface ProfileDropdownMenuProps {
       | TABS.CONTACTS
       | TABS.SETTINGS
       | TABS.USERS
+      | TABS.FILES
+
   ) => void;
 }
 const ProfileDropdownMenu = ({ onChangeTab }: ProfileDropdownMenuProps) => {
@@ -146,6 +150,12 @@ const ProfileDropdownMenu = ({ onChangeTab }: ProfileDropdownMenuProps) => {
           onClick={() => onChangeTab(TABS.USERS)}
         >
           Profile <i className="bx bx-user-circle text-muted ms-1"></i>
+        </DropdownItem>
+        <DropdownItem
+          className="d-lg-none d-flex align-items-center justify-content-between"
+          onClick={() => onChangeTab(TABS.FILES)}
+        >
+          Files <i className="bx bx-file text-muted ms-1"></i>
         </DropdownItem>
         <DropdownItem
           className="d-flex align-items-center justify-content-between"
@@ -192,6 +202,7 @@ const SideMenu = ({ onChangeLayoutMode }: any) => {
     | TABS.CHAT
     | TABS.CONTACTS
     | TABS.SETTINGS
+    | TABS.FILES
     | TABS.USERS
   >(TABS.CHAT);
   const onChangeTab = (
@@ -202,6 +213,8 @@ const SideMenu = ({ onChangeLayoutMode }: any) => {
       | TABS.CONTACTS
       | TABS.SETTINGS
       | TABS.USERS
+      | TABS.FILES
+
   ) => {
     setSelectedTab(id);
     dispatch(changeTab(id));

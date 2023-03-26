@@ -14,4 +14,5 @@ export enum TABS {
   CALLS = "pills-calls",
   BOOKMARK = "pills-bookmark",
   SETTINGS = "pills-setting",
+  FILES = "pills-files",
 }
