@@ -12,7 +12,6 @@ import LockScreen from "../pages/Authentication/LockScreen";
 
 // dashboard
 import Dashboard from "../pages/Dashboard/index";
-import Bookmark from "../pages/Dashboard/Bookmark";
 import StarterPage from "../pages/StarterPage/index";
 
 interface RouteProps {
@@ -33,9 +32,7 @@ const publicRoutes: Array<RouteProps> = [
 const privateRoutes: Array<RouteProps> = [
   { path: "/pages-starter", component: <StarterPage /> },
   { path: "/:active_tab", component: <Dashboard /> },
-  //{ path: "/bookmark", component: <Dashboard /> },
-//  { path: "/profile", component: <Dashboard /> },
-  { path: "/",  component: <Root /> },
+  { path: "/", component: <Root /> },
 ];
 
 export { publicRoutes, privateRoutes };

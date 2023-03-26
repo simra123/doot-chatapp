@@ -21,7 +21,7 @@ const File = () => {
           <Col xxl={3} md={3}>
             <div className="drag-image">
               {
-                previewImage ? <img src={previewImage} /> : <>
+                previewImage ? <img src={previewImage} alt="preview" /> : <>
                   <div className="icon"> <i className="bx bx-cloud-upload"></i></div>
                   <h6>Drag & Drop File Here</h6>
                   {/* <span>OR</span><button>Browse File</button> */}

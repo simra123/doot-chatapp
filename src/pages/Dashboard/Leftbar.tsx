@@ -1,4 +1,4 @@
-import React, {useEffect } from "react";
+import React, { useEffect } from "react";
 import { TabContent, TabPane } from "reactstrap";
 
 // hooks
@@ -15,7 +15,7 @@ import Calls from "./Calls/index";
 import Bookmark from "./Bookmark/index";
 import Settings from "./Settings/index";
 
-interface LeftbarProps {}
+interface LeftbarProps { }
 const Leftbar = (props: LeftbarProps) => {
   // global store
   const { useAppSelector } = useRedux();
@@ -24,14 +24,14 @@ const Leftbar = (props: LeftbarProps) => {
     activeTab: state.Layout.activeTab,
   }));
 
-const  activePage : string =  activeTab?.split("-")[1]
-const navigate = useNavigate()
-
-useEffect(()=> {
-if(activePage){
-  navigate(`/${activePage}`)
-}
-}, [activePage])
+  const activePage: string = activeTab?.split("-")[1]
+  const navigate = useNavigate()
+  // eslint-disable-next-line no-use-before-define
+  useEffect(() => {
+    if (activePage) {
+      navigate(`/${activePage}`)
+    }
+  }, [activePage])
 
   return (
     <>
