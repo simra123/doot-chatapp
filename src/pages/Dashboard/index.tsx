@@ -47,7 +47,7 @@ const Index = (props: IndexProps) => {
           </div>
         ) : (
 
-          active_tab === "contacts" ? <File /> : <Welcome />
+          active_tab === "contacts" || active_tab === "bookmark" ? <File /> : <Welcome />
 
 
         )}

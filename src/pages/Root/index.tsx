@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 const Index = (props: any) => {
   return (
     <div>
-      <Navigate to="/active_tab" />
+      <Navigate to="/:active_tab" />
     </div>
   );
 };
