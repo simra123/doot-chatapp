@@ -38,9 +38,9 @@ const File = () => {
             </div>
           </Col>
           <Col xs="12" className="d-flex mt-md-3 mb-5">
-            <Button className="m-1 mb-5 mb-md-0" color="secondary">Reset</Button>
-            <Button className="m-1 mb-5 mb-md-0" color="primary">Save</Button>
-            <Button className="m-1 mb-5 mb-md-0" color="success">Save & Restrain</Button>
+            <Button className="m-1 mb-3 mb-md-0" color="secondary">Reset</Button>
+            <Button className="m-1 mb-3 mb-md-0" color="primary">Save</Button>
+            <Button className="m-1 mb-3 mb-md-0" color="success">Save & Restrain</Button>
           </Col>
         </Row>
       </div>
