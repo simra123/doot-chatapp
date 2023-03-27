@@ -16,14 +16,14 @@ export interface MenuItemType {
     | TABS.USERS;
 }
 const MENU_ITEMS: MenuItemType[] = [
-  {
-    id: 1,
-    key: "pills-user-tab",
-    icon: "bx bx-user-circle",
-    tooltipTitle: "Profile",
-    className: "d-none d-lg-block",
-    tabId: TABS.USERS,
-  },
+  // {
+  //   id: 1,
+  //   key: "pills-user-tab",
+  //   icon: "bx bx-user-circle",
+  //   tooltipTitle: "Profile",
+  //   className: "d-none d-lg-block",
+  //   tabId: TABS.USERS,
+  // },
   // {
   //   id: 2,
   //   key: "pills-chat-tab",
