@@ -39,15 +39,16 @@ const ContactItem = ({ contact, onSelectChat }: ContactItemProps) => {
     "bg-purple",
   ];
   const [color] = useState(Math.floor(Math.random() * colors.length));
-const {dispatch} = useRedux()
+  const { dispatch } = useRedux()
   return (
-    <li onClick={() =>{  
+    <li onClick={() => {
       dispatch(toggleUserDetailsTab(true))
       onSelectChat(contact.id)
-      }}>
+    }}>
       <div className="d-flex align-items-center">
         <div className="flex-shrink-0 me-2">
-          <div className="avatar-xs">
+
+          <div className="contact_avatar avatar-xs online">
             {contact.profileImage ? (
               <img
                 src={contact.profileImage}
@@ -60,6 +61,7 @@ const {dispatch} = useRedux()
                   "avatar-title",
                   "rounded-circle",
                   "font-size-10",
+                  "img-fluid",
                   "text-uppercase",
                   colors[color]
                 )}
@@ -67,7 +69,10 @@ const {dispatch} = useRedux()
                 {shortName}
               </span>
             )}
+            <span className="user-status"></span>
           </div>
+
+
         </div>
         <div className="flex-grow-1">
           <h5 className="font-size-14 m-0">{fullName}</h5>

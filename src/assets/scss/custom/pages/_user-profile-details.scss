@@ -57,6 +57,33 @@
     }
   }
 }
+.contact_avatar{
+  position: relative;
+  .user-status {
+    width: 11px;
+    height: 11px;
+    background-color: #adb5bd;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    right: auto;
+    left: 20px;
+    bottom: 0;
+
+  }
+  &.online {
+    .user-status {
+      background-color: $success;
+    }
+  }
+
+  &.away {
+    .user-status {
+      background-color: $warning;
+    }
+  }
+}
+
 
 .user-profile-img {
   position: relative;
