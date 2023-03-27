@@ -26,7 +26,7 @@ const Index = (props: IndexProps) => {
   const { isChannel } = useConversationUserType();
   const { active_tab } = useParams()
 
-
+  console.log(selectedChat)
   return (
     <>
       <Leftbar />

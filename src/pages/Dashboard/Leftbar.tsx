@@ -33,7 +33,7 @@ const Leftbar = (props: LeftbarProps) => {
       navigate(`/${activePage}`)
     }
   }, [activePage, navigate])
-  console.log(activeTab)
+
   return (
     <>
       {/* start chat-leftsidebar */}

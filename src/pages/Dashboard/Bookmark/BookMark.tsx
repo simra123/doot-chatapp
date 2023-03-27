@@ -10,11 +10,15 @@ import {
 import { Link } from "react-router-dom";
 
 // hooks
+
 import { useRedux } from "../../../hooks/index";
 
 // interface
 import { BookMarkTypes } from "../../../data/bookmarks";
 import UpdateDeleteBookmark from "../../../components/UpdateDeleteBookmark";
+import {
+  changeSelectedChat,
+} from "../../../redux/actions";
 
 interface BookMarkProps {
   bookmark: BookMarkTypes;
@@ -23,7 +27,7 @@ interface BookMarkProps {
 }
 const BookMark = ({ bookmark, onUpdate, onDelete }: BookMarkProps) => {
   // global store
-  const { useAppSelector } = useRedux();
+  const { useAppSelector, dispatch } = useRedux();
 
   const { isBookmarkUpdated } = useAppSelector(state => ({
     isBookmarkUpdated: state.Bookmarks.isBookmarkUpdated,
@@ -71,7 +75,9 @@ const BookMark = ({ bookmark, onUpdate, onDelete }: BookMarkProps) => {
           </div>
           <div className="flex-grow-1 overflow-hidden">
             <h5 className="font-size-14 mb-1">
-              <Link to="#" className="text-truncate p-0">
+              <Link to="#" onClick={() => {
+                dispatch(changeSelectedChat(null));
+              }} className="text-truncate p-0">
                 {bookmark.title}
               </Link>
             </h5>
