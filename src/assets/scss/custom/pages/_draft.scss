@@ -1,14 +1,15 @@
 @import '~react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 $border-color : "green";
-$border-radius : "5px";
+$border-radius : "2px";
 
 .rdw-editor-wrapper {
 
-
+margin-bottom: 10px;
   .toolbar_body {
     background-color: $card-bg ;
     margin-bottom: 0;
     padding: 0.5rem;
+    border: 1px solid rgba(119, 114, 114, 0.199);
     padding-bottom: 0;
     border-color: $border-color;
     border-top-left-radius: $border-radius;
@@ -44,7 +45,7 @@ $border-radius : "5px";
     padding: 0.5rem 1.2rem;
     background-color: #fff !important;
     overflow: auto !important;
-   
+    border: 1px solid rgba(119, 114, 114, 0.199);
     height: 232px !important;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;

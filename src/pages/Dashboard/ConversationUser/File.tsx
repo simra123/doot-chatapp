@@ -15,7 +15,7 @@ const File = () => {
   return (
     <React.Fragment>
       <div className={activeTab !== "pills-files" ? "chat-welcome-section " : "mobile-files"}>
-        <Row className="w-100 justify-content-center p-5">
+        <Row className="w-100 justify-content-center p-md-5 p-2">
           <Col xxl={9} md={9}>
             <Editor toolbarClassName="toolbar_body"
               wrapperClassName="wrapperClassName"
@@ -37,10 +37,10 @@ const File = () => {
 
             </div>
           </Col>
-          <Col xs="12" className="d-flex mt-5">
-            <Button className="m-1" color="secondary">Reset</Button>
-            <Button className="m-1" color="primary">Save</Button>
-            <Button className="m-1" color="success">Save & Restrain</Button>
+          <Col xs="12" className="d-flex mt-md-3 mb-5">
+            <Button className="m-1 mb-5 mb-md-0" color="secondary">Reset</Button>
+            <Button className="m-1 mb-5 mb-md-0" color="primary">Save</Button>
+            <Button className="m-1 mb-5 mb-md-0" color="success">Save & Restrain</Button>
           </Col>
         </Row>
       </div>
